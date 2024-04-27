@@ -59,7 +59,7 @@ html {
   border: 2px solid #ffffff; /* Set border width and color */
   background-color: transparent; /* Set background color transparent */
   color: #ffffff; /* Set text color */
-  font-size: 36px; /* Set font size */
+  font-size: 30px; /* Set font size */
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
   padding: 10px 20px; /* Set padding */
@@ -213,7 +213,6 @@ html {
   font-weight: bold;
   font-size: 20px;
   padding: 20px 228px ; /* Padding around the details */
-  width: 90%; /* Adjust width as needed */
   max-width: 1200px; /* Maximum width */
   margin: 20px auto; /* Center the bottom details box and add space above */
   border-radius: 24px; /* Rounded corners */
@@ -299,11 +298,13 @@ html {
 /* Media Query for mobile devices */
 @media screen and (max-width: 768px) {
   .App-main {
-    font-size: 36px;
+    font-size: 5vw;
+    margin-top: 75px; /* Adjusted margin to move the element down */
   }
   
+  
   .about-me {
-    font-size: 14px;
+    font-size: 12px;
     width: 90%;
     margin: 0 auto; /* Center the about-me section */
   }
@@ -315,7 +316,7 @@ html {
 
   /* Social media icons */
   .social-media {
-    margin-top: 20px; /* Adjusted margin for mobile devices */
+    margin-top: 10px; /* Adjusted margin for mobile devices */
     text-align: center; /* Center the social media icons */
   }
 
@@ -326,14 +327,8 @@ html {
 
   /* Scroll-down arrow */
   .scroll-down {
-    margin-top: 30px; /* Adjusted margin for mobile devices */
-    text-align: center; /* Center the scroll-down arrow */
+    display: none;
   }
-
-  .scroll-down a {
-    font-size: 36px; /* Adjusted font size for arrow on mobile devices */
-  }
-
   /* Project heading */
   .project-heading {
     margin-top: 30px; /* Adjusted margin for mobile devices */
@@ -351,11 +346,11 @@ html {
   }
 
   .project-box {
-    width: calc(50% - 20px); /* Adjusted width of each project box for mobile devices */
+    width: calc(80vw - 10px); /* Adjusted width of each project box for mobile devices */
     display: inline-block; /* Ensure project boxes are displayed inline */
     margin-bottom: 20px; /* Add space between project boxes */
   }
-
+  
   .project-box h3 {
     font-size: 18px; /* Adjusted font size for heading on mobile devices */
   }
@@ -372,41 +367,107 @@ html {
 
   .project-box a {
     padding: 8px 16px; /* Adjusted padding for link on mobile devices */
-    font-size: 16px; /* Adjusted font size for link on mobile devices */
+    font-size: 10px; /* Adjusted font size for link on mobile devices */
   }
+  .project-box .buttons {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .project-box .buttons a {
+    display: inline-block;
+    background-color: #000000;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1.5vw 3vw; /* Adjusted padding for buttons based on viewport width */
+    text-decoration: none;
+    border-radius: 1vw; /* Adjusted border radius for buttons based on viewport width */
+    margin: 0 1vw; /* Adjusted margin for buttons based on viewport width */
+  }
+  
+  .project-box .buttons a:hover {
+    background-color: #828282;
+  }
+  
 
   /* Header bar */
   .header-bar {
     width: 90%; /* Adjust width to match project boxes */
     margin: 40px auto; /* Center the header bar horizontally */
-    padding: 20px; /* Adjust padding */
+    padding: 15px; /* Adjust padding */
     text-align: center; /* Center the content within the header bar */
   }
 
   .project-gallery-heading h2 {
-    font-size: 24px; /* Adjust font size */
-  }
+    font-size: 4vw; /* Adjusted font size for heading based on viewport width */
 
-  .resume-button {
-    padding: 12px 24px; /* Adjust padding */
-    font-size: 14px; /* Adjust font size */
   }
-
-  .social-media-bar a {
-    font-size: 24px; /* Adjust font size */
-    margin-right: 10px; /* Adjust margin */
-  }
-
-    .bottom-details-box {
-      padding: 20px 20px; /* Adjusted padding for mobile devices */
-      width: 90%; /* Adjust width as needed */
-      margin: 20px auto; /* Center the bottom details box and add space above */
-    }
   
-    .detail {
-      margin-bottom: 10px; /* Spacing between details */
-      border-bottom: 1px solid #000000; /* Add a solid white border bottom */
-      padding-bottom: 10px; /* Add padding below the border */
-    }
+  .resume-button {
+    padding: 2vw 4vw; /* Adjusted padding based on viewport width */
+    font-size: 2vw; /* Adjusted font size for button based on viewport width */
+  }
+  
+  .social-media-bar a {
+    display: none;
+  }
+
+  .bottom-details-box {
+    background-color: #ffffff; /* Background color for the bottom details box */
+    color: #000000; /* Text color */
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 2.5vw; /* Adjusted font size for the bottom details box based on viewport width */
+    padding: 2vw 15vw; /* Adjusted padding around the details based on viewport width */
+    width: 54vw; /* Adjusted width as needed based on viewport width */
+    max-width: 1200px; /* Maximum width */
+    margin: 5vw auto; /* Center the bottom details box and add space above based on viewport width */
+    border-radius: 4vw; /* Adjusted rounded corners based on viewport width */
+  }
+  
+  .bottom-details {
+    display: flex; /* Use flexbox to align items */
+    flex-direction: column; /* Stack details vertically */
+  }
+  
+  .detail {
+    margin-bottom: 1vw; /* Adjusted spacing between details based on viewport width */
+    border-bottom: 0.1vw solid #000000; /* Adjusted border bottom thickness based on viewport width */
+    padding-bottom: 1vw; /* Adjusted padding below the border based on viewport width */
+  }
+  
+  .detail:last-child {
+    border-bottom: none; /* Remove the border bottom from the last detail */
+  }
+  
+  .detail a {
+    color: #000000; /* Link color */
+    text-decoration: none; /* Remove underline from links */
+  }
+  
+  .detail a:hover {
+    text-decoration: underline; /* Add underline on hover for links */
+  }
+  
+  .footer {
+    color: #fff; /* Text color */
+    text-align: center; /* Center-align text */
+    padding: 5vw; /* Adjusted padding around the content based on viewport width */
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.5vw; /* Adjusted font size for the footer based on viewport width */
+    text-shadow: 0.5vw 0.5vw 1vw rgba(0, 0, 0, 0.5); /* Adjusted text shadow based on viewport width */
+  }
+  
+  .credit-link {
+    text-decoration: none;
+    color: #fff; /* Link color */
+  }
+  
+  .credit-link:hover {
+    text-decoration: underline; /* Add underline on hover for link */
+  }
+  
+  
   
 }
